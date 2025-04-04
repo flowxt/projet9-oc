@@ -1,7 +1,7 @@
 import { ROUTES_PATH } from "../constants/routes.js";
 export let PREVIOUS_LOCATION = "";
 
-// we use a class so as to test its methods in e2e tests
+//nous utilisons une classe pour tester ses méthodes dans les tests e2e
 export default class Login {
   constructor({
     document,
@@ -68,7 +68,7 @@ export default class Login {
       });
   };
 
-  // not need to cover this function by tests
+  //pas besoin de tester cette fonction
   login = (user) => {
     if (this.store) {
       return this.store
@@ -86,7 +86,7 @@ export default class Login {
     }
   };
 
-  // not need to cover this function by tests
+  // pas besoin de tester cette fonction
   createUser = (user) => {
     if (this.store) {
       return this.store
