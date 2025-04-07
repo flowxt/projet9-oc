@@ -205,3 +205,62 @@ describe("Given I am connected as an employee", () => {
     //test error 404 & 500
   });
 });
+
+// Exemple
+// describe("When I upload a file with a right extension", () => {
+//   test("Then the file should be uploaded", () => {
+//     // Création d'un objet avec les propriétés adaptées
+//     Object.defineProperty(window, "localStorage", {
+//       value: localStorageMock,
+//     });
+//     // Connexion en tant qu'employé
+//     window.localStorage.setItem(
+//       "user",
+//       JSON.stringify({
+//         type: "Employee",
+//       })
+//     );
+//     // Création d'une div root comme dans le DOM
+//     const root = document.createElement("div");
+//     root.setAttribute("id", "root");
+//     // Ajout de la div
+//     document.body.append(root);
+//     //Lancement de la fonction rooter
+//     router();
+//     // Navigation sur la page NewBills
+//     window.onNavigate(ROUTES_PATH.NewBill);
+
+//     // Ajout de la view newbill
+//     document.body.innerHTML = NewBillUI();
+
+//     // Création d'une nouvelle note de frais
+//     const newBillObject = new NewBill({
+//       document,
+//       onNavigate,
+//       store: mockStore,
+//       localStorage: window.localStorage,
+//     });
+
+//     // Gestion de la méthode pour l'ajout d'un fichier
+//     const file = screen.getByTestId("file");
+//     const handleChangeFile = jest.fn((e) =>
+//       newBillObject.handleChangeFile(e)
+//     );
+//     //Simulation d'un ajout de fichier
+//     file.addEventListener("change", handleChangeFile);
+//     fireEvent.change(file, {
+//       target: {
+//         files: [new File(["Test"], "test.png", { type: "image/png" })],
+//       },
+//     });
+
+//     //La fonction est bien appelée
+//     expect(handleChangeFile).toHaveBeenCalled();
+
+//     // Récupération du nom du fichier affiché
+//     const fileTest = document.querySelector(`input[data-testid="file"]`)
+//       .files[0].name;
+
+//     // Vérification que le fichier téléchargé est le même que celui affiché
+//     expect(fileTest).toEqual("test.png");
+//   });

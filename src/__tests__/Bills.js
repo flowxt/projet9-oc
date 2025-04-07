@@ -64,6 +64,7 @@ describe("Given I am connected as an employee", () => {
         )
         .map((a) => a.innerHTML);
 
+      // Probleme des dates résolu ici :
       // Conversion de la date formatée en ISO avant de les comparer pour les trier
       const formatedToIso = (date) => {
         // Sépare la date formatée en jour, mois et année

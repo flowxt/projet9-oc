@@ -30,7 +30,7 @@ export default class Login {
       type: "Employee",
       email: e.target.querySelector(`input[data-testid="employee-email-input"]`)
         .value,
-      password: e.target.querySelector(
+      password: e.target.querySeidlector(
         `input[data-testid="employee-password-input"]`
       ).value,
       status: "connected",
@@ -64,7 +64,7 @@ export default class Login {
         this.onNavigate(ROUTES_PATH["Dashboard"]);
         this.PREVIOUS_LOCATION = ROUTES_PATH["Dashboard"];
         PREVIOUS_LOCATION = this.PREVIOUS_LOCATION;
-        document.body.style.backgroundColor = "#fff";
+        this.document.body.style.backgroundColor = "#fff";
       });
   };
 
