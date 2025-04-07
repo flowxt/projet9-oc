@@ -24,7 +24,6 @@ export default class NewBill {
     const fileInput = this.document.querySelector(`input[data-testid="file"]`);
     //fichier chargé par l'user
     const file = fileInput.files[0];
-    d;
     //verfier l'extension du fichier
     //initialiser un tableau avec les extensions acceptées
     const allowedExt = ["jpg", "jpeg", "png"];
@@ -42,7 +41,6 @@ export default class NewBill {
       );
       fileInput.value = "";
       return;
-      a;
     }
     //récupère le nom du fichier à partir du chemin du fichier
     //fileInput.value = "C:\\Users\\Username\\Documents\\image.png"

@@ -30,7 +30,7 @@ export default class Login {
       type: "Employee",
       email: e.target.querySelector(`input[data-testid="employee-email-input"]`)
         .value,
-      password: e.target.querySeidlector(
+      password: e.target.querySelector(
         `input[data-testid="employee-password-input"]`
       ).value,
       status: "connected",
